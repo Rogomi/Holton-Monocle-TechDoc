@@ -1,1 +1,0 @@
-# Holton-Monocle-TechDoc
