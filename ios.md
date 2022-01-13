@@ -127,4 +127,213 @@ Some of the third party libraries are installed using SPM
   - `successSignUp()`
   - `googleSignIn()`
 
+- **ResetPasswordViewController** - lets the user reset their password.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapSend(_ sender: Any)`
+  - `goNext()`
+  - `sendResetEmail()`
 
+- **ResetEmailViewController** - lets the user reset their email.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapOpenEmail(_ sender: Any)`
+
+- **AppleAuthViewController** - superclass of views with Apple signin.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `presentationAnchor(for controller: ASAuthorizationController)`
+  - `handleAuthorizationAppleIDButtonPress()`
+  - `randomNonceString(length: Int = 32)`
+  - `startSignInWithAppleFlow()`
+  - `sha256(_ input: String)`
+  - `authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization)`
+  - `authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error)`
+  - `appleSignIn()`
+
+- **ARCameraViewController** - lets the user use the camera to see nearby landmarks.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapCloseButton(_ sender: Any)`
+  - `viewDidLayoutSubviews()`
+  - `touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)`
+  - `didReceiveMemoryWarning()`
+  - `sceneLocationViewDidAddSceneLocationEstimate(sceneLocationView: SceneLocationView, position: SCNVector3, location: CLLocation)`
+  - `sceneLocationViewDidRemoveSceneLocationEstimate(sceneLocationView: SceneLocationView, position: SCNVector3, location: CLLocation)`
+  - `sceneLocationViewDidConfirmLocationOfNode(sceneLocationView: SceneLocationView, node: LocationNode)`
+  - `sceneLocationViewDidSetupSceneNode(sceneLocationView: SceneLocationView, sceneNode: SCNNode)`
+  - `sceneLocationViewDidUpdateLocationAndScaleOfLocationNode(sceneLocationView: SceneLocationView, locationNode: LocationNode)`
+  - `fetchFirebaseLocations()`
+  - `addMarker (place: FirebaseLocationObject)`
+
+- **ARSelectionViewController** - additional camera functions.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapCancelButton(_ sender: Any)`
+  - `didTapAddButton(_ sender: Any)`
+  - `setFavoriteButton()`
+
+- **ExploreViewController** - the view that presents the map and it's other components.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapCameraButton(_ sender: Any)`
+
+- **MapViewController** - view that shows the map and landmarks, and also lets the user search.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapCameraButton(_ sender: Any)`
+  - `setupAds()`
+  - `reload()`
+  - `didTapSettings(_ sender: Any)`
+  - `didTapSearchBarButton(_ sender: Any)`
+  - `goToSettings()`
+  - `unwindToHomeVC(unwindSegue: UIStoryboardSegue)`
+  - `initializeLocationManager()`
+  - `setupMap()`
+  - `locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])`
+  - `focusMap(latitude: CLLocationDegrees, longitude: CLLocationDegrees)`
+  - `listLikelyPlaces()`
+  - `fetchFirebaseLocations()`
+  - `fetchAllFirebaseLocations()`
+  - `fetchFirebaseNearbyLocations()`
+  - `addMarker (location: FirebaseLocationObject, focus: Bool = false)`
+  - `textFieldDidEndEditing(_ textField: UITextField)`
+  - `beginSearch()`
+  - `fireStoreSearch(query: String)`
+  - `mapView(_ mapView: GMSMapView, didTap marker: GMSMarker)`
+  - `adViewDidLoadAd(_ view: MPAdView!, adSize: CGSize)`
+  - `adView(_ view: MPAdView!, didFailToLoadAdWithError error: Error!)`
+  - `viewControllerForPresentingModalView() -> UIViewController?`
+
+- **MapPulleyController** - manages the communication between the MapViewController and the MapDrawerViewController.    
+  ##### Methods
+  - `viewDidLoad()`
+
+- **MapDrawerViewController** - view that manages the behavior of the drawer, which may show the details of a landmark or a list of landmarks.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `reload()`
+  - `registerViews()`
+  - `showLocationDetail()`
+  - `showSearchResults()`
+  - `fetchLocation(documentId: String)`
+  - `fetchUserById()`
+  - `searchFirebase(query: String)`
+  - `addAsFavorite(landmarkId: String, cell: WithFavoriteCell)`
+  - `setFavoriteStatus(landmarkId: String, cell: WithFavoriteCell)`
+  - `removeFromFavorites(cell: WithFavoriteCell)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int`
+  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell`
+  - `showDetail(location: FirebaseLocationObject)`
+  - `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)`
+  - `drawerPositionDidChange(drawer: PulleyViewController, bottomSafeArea: CGFloat)`
+
+- **SubscriptionViewController** - a view that lets the user manage their subscription of the app.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapUpgradeButton(_ sender: Any)`
+  - `didTapCancelButton(_ sender: Any)`
+  - `fetchProducts()`
+  - `productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse)`
+  - `paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction])`
+  - `complete(transaction: SKPaymentTransaction)`
+  - `restore(transaction: SKPaymentTransaction)`
+  - `fail(transaction: SKPaymentTransaction)`
+  - `deliverPurchaseNotificationFor(identifier: String?)`
+
+- **FavoritesPulleyViewController** - manages the communication between FavoritesViewController and MapViewController.    
+  ##### Methods
+  - `viewDidLoad()`
+
+- **FavoritesViewController** - view that lets the user view and manage their favorites.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `viewWillAppear(_ animated: Bool)`
+  - `reload()`
+  - `fetchFavorites()`
+  - `didTapBackButton(_ sender: Any)`
+  - `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int`
+  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell`
+  - `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)`
+
+- **AccountDetailsViewController** - view that shows the user's account details and lets the user choose options on what to do including logging out.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `unwindToSettings(unwindSegue: UIStoryboardSegue)`
+  - `logout()`
+  - `goToChangePassword()`
+  - `goToContactUs()`
+  - `goToPrivacyPolicy()`
+  - `goToAboutUs()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int`
+  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell`
+  - `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)`
+
+- **ChangePasswordViewController** - view that lets the user change their password.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapResetButton(_ sender: Any)`
+  - `backToSettings()`
+  - `validateNewPassword() -> Bool`
+  - `validateConfirmPassword() -> Bool`
+  - `resetPassword()`
+  - `resetPasswordAuth() -> Bool`
+  - `textFieldDidEndEditing(_ textField: UITextField)`
+
+- **PrivacyPolicyViewController** - view that shows the user the privac policy of the app.    
+  ##### Methods
+  - `viewDidLoad()`
+
+- **AboutUsViewController** - view that lets the user view information about the app.    
+  ##### Methods
+  - `viewDidLoad()`
+
+- **ContactUsViewController** - view that lets the user choose which way to contact the owner of the app.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `unwindToContactUs(unwindSegue: UIStoryboardSegue)`
+  - `goToRating()`
+  - `goToReport()`
+  - `goToSuggest()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int`
+  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell`
+  - `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)`
+
+- **RateYourExperienceViewController** - view that lets the user rate the app.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `btn1(_ sender: Any)`
+  - `btn2(_ sender: Any)`
+  - `btn3(_ sender: Any)`
+  - `btn4(_ sender: Any)`
+  - `btn5(_ sender: Any)`
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapDoneButton(_ sender: Any)`
+  - `submitRating()`
+  - `setRating()`
+
+- **EmailFeedbackViewController** - the superclass of views that involves sending an email.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `submitEmail(email: [String: Any?])`
+  - `success()`
+  - `generateBody(content: String, rating: Int? = nil) -> String`
+
+
+
+- **ReportViewController** - view that lets the user report bugs or issues in the app.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapDoneButton(_ sender: Any)`
+  - `submitReport()`
+
+- **SuggestViewController** - view that lets the user send their suggestions for the app.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapDone(_ sender: Any)`
+  - `submitSuggestion()`
