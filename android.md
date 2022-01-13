@@ -193,10 +193,6 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   ##### Fragment/ViewModel Methods
 
 
-### APPLICATION DIAGRAM
-
-[here](https://drive.google.com/file/d/1s2uI8Yv_OeTRbzJL0wV38KEIyBPhwlfn/view?usp=sharing)
-
 ### ARCHITECTURE USED
 
 Holton Monocle Android follows and uses the Model-View-ViewModel Architecture (MVVM). It consists of an xml file which is the UI layout definition for the screen, a Fragment that is the UI controller that displays the data, and the ViewModel, a class that prepares the data for viewing in the Fragment and reacts to user interactions.
