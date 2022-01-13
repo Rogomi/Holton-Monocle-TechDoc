@@ -35,29 +35,29 @@ We also use Android Virtual Device in Android Studio in order to test the Native
 Most of the third-party libraries are integrated using Gradle. They can be added by searching library names found in the Dependencies tab in the Project Structure window.
 
 ##### Important Libraries
-**Android Lifecycle** - Used to manage data and connections between activities and fragments.
-**RxAndroid and RxJava** - Used to connect to a network and manage data.
-**Google Play Services** - Used for ARCore and Auto-update features.
-**Google ARCore** - Used for ARCamera.
-**Google Maps** - Used for Locations.
+**Android Lifecycle** - Used to manage data and connections between activities and fragments.  
+**RxAndroid and RxJava** - Used to connect to a network and manage data.  
+**Google Play Services** - Used for ARCore and Auto-update features.  
+**Google ARCore** - Used for ARCamera.  
+**Google Maps** - Used for Locations.  
 
-##### Firebase Platform Libraries.
-**Firebase/Analytics** - Used for App Analytics.
-**Firebase/Crashlytics** - Used to identify causes of crashes from users.
-**Firebase/Performance** - Used to monitor app performance.
-**Firebase/Firestore** - Used to store user and landmark data.
+##### Firebase Platform Libraries.  
+**Firebase/Analytics** - Used for App Analytics.  
+**Firebase/Crashlytics** - Used to identify causes of crashes from users.  
+**Firebase/Performance** - Used to monitor app performance.  
+**Firebase/Firestore** - Used to store user and landmark data.  
 
 ##### UI Libraries
-**Glide** - Used for displaying images.
-**Android Spinkit** - Used for showing a circular loading display.
+**Glide** - Used for displaying images.  
+**Android Spinkit** - Used for showing a circular loading display.  
 
 ##### Other Useful Libraries 
-**Android Navigation: Kotlin** - Used to manage connections between different screens and layouts.
-**Esperando** - Used to connect shared data between activies.
-**Dagger-Hilt** - Used for easier data management between activities.
-**Karumi/Dexter** - Used to simplify permission requests and access.
-**Google Billing** - Used for monetization and payment for services.
-**Mopub Ads** - Used for monetization.
+**Android Navigation: Kotlin** - Used to manage connections between different screens and layouts.  
+**Esperando** - Used to connect shared data between activies.  
+**Dagger-Hilt** - Used for easier data management between activities.  
+**Karumi/Dexter** - Used to simplify permission requests and access.  
+**Google Billing** - Used for monetization and payment for services.  
+**Mopub Ads** - Used for monetization.  
 
 ### IMPORTANT CLASSES
 
@@ -68,7 +68,7 @@ Most of the third-party libraries are integrated using Gradle. They can be added
 
 - **SplashScreen Fragment** - handles the display for loading the splashscreen for 2 seconds.
   ##### Fragment/ViewModel Methods
-  - `startSplash()`
+  - `startSplash()`  
 
 - **Login Fragment** - handles the display where users will input their account and password or sign in via google or apple.
   ##### Fragment/ViewModel Methods
@@ -78,7 +78,7 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `addUserToFirestore()`
   - `applePending()`
   - `appleAuth()`
-  - `goToHome()`
+  - `goToHome()`  
   
 - **Sign Up Fragment** - handles the display where users can sign up their accounts or sign-in via google or apple.
   ##### Fragment/ViewModel Methods
@@ -90,17 +90,17 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `addUserToFirestore()`
   - `applePending()`
   - `appleAuth()`
-  - `goToHome()`
+  - `goToHome()`  
 
 - **Reset Password Fragment** - handles the display for the user to reset their password.
   ##### Fragment/ViewModel Methods
   - `resetPassword()`
   - `showCheckMail()`
-  - `goToGmail()`
+  - `goToGmail()`  
 
 - **Main Nav Fragment** - handles the bottom navigation bar.
 ##### Fragment/ViewModel Methods
-  - `initNavigation()`
+  - `initNavigation()`  
   
 - **Explore Fragment** - handles the display for maps, ar, and ads.
   ##### Fragment/ViewModel Methods
@@ -123,7 +123,7 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `attachMarkerToScene()`
   - `detachMarker()`
   - `search()`
-  - `loadNearbyLandmarks()`
+  - `loadNearbyLandmarks()`  
 
 - **LocationDetails Dialog Fragment** - handles the display when user taps a landmark.
   ##### Fragment/ViewModel Methods
@@ -131,7 +131,7 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `initFavoriteButton()`
   - `initLocationDetailsAdapter()`
   - `addToFavorites()`
-  - `checkIfFavorite()`
+  - `checkIfFavorite()`  
 
 - **Search Dialog Fragment** - handles the display when user taps a landmark.
   ##### Fragment/ViewModel Methods
@@ -140,26 +140,26 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `addBookmark()`
   - `showDetails()`
   - `addToFavorites()`
-  - `checkIfFavorite()`
+  - `checkIfFavorite()`  
   
 - **Favorites Fragment** - handles the display of the user's favorited landmarks.
   ##### Fragment/ViewModel Methods
   - `initFavoriteAdapter()`
-  - `getMyFavorites()`
+  - `getMyFavorites()`  
 
 - **Settings Fragment** - handles the display for app's settings. This includes change password, upgrade plan, privacy policy, contact us, and about the app.
   ##### Fragment/ViewModel Methods
   - `initBillingClient()`
   - `upgradeToPremium()`
   - `initDetails()`
-  - `onPurchasesUpdated()`
+  - `onPurchasesUpdated()`  
   
 - **Change Password Fragment** - handles the display the user to be able to change their password. By default, third party accounts cannot change password.
   ##### Fragment/ViewModel Methods
   - `initActions()`
   - `getOldPassword()`
   - `initupdatePasswordActions()`
-  - `updatePassword()`
+  - `updatePassword()`  
 
 - **Upgrade Fragment** - handles google pay integration for the app.
   ##### Fragment/ViewModel Methods
