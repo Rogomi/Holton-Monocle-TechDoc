@@ -127,7 +127,7 @@ Some of the third party libraries are installed using SPM
   - `successSignUp()`
   - `googleSignIn()`
 
-- **ResetPasswordViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **ResetPasswordViewController** - lets the user reset their password.    
   ##### Methods
   - `viewDidLoad()`
   - `didTapBackButton(_ sender: Any)`
@@ -135,12 +135,12 @@ Some of the third party libraries are installed using SPM
   - `goNext()`
   - `sendResetEmail()`
 
-- **ResetEmailViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **ResetEmailViewController** - lets the user reset their email.    
   ##### Methods
   - `viewDidLoad()`
   - `didTapOpenEmail(_ sender: Any)`
 
-- **AppleAuthViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **AppleAuthViewController** - superclass of views with Apple signin.    
   ##### Methods
   - `viewDidLoad()`
   - `presentationAnchor(for controller: ASAuthorizationController)`
@@ -152,7 +152,7 @@ Some of the third party libraries are installed using SPM
   - `authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error)`
   - `appleSignIn()`
 
-- **ARCameraViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **ARCameraViewController** - lets the user use the camera to see nearby landmarks.    
   ##### Methods
   - `viewDidLoad()`
   - `didTapCloseButton(_ sender: Any)`
@@ -167,19 +167,19 @@ Some of the third party libraries are installed using SPM
   - `fetchFirebaseLocations()`
   - `addMarker (place: FirebaseLocationObject)`
 
-- **ARSelectionViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **ARSelectionViewController** - additional camera functions.    
   ##### Methods
   - `viewDidLoad()`
   - `didTapCancelButton(_ sender: Any)`
   - `didTapAddButton(_ sender: Any)`
   - `setFavoriteButton()`
 
-- **ExploreViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **ExploreViewController** - the view that presents the map and it's other components.    
   ##### Methods
   - `viewDidLoad()`
   - `didTapCameraButton(_ sender: Any)`
 
-- **MapViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **MapViewController** - view that shows the map and landmarks, and also lets the user search.    
   ##### Methods
   - `viewDidLoad()`
   - `didTapCameraButton(_ sender: Any)`
@@ -206,11 +206,11 @@ Some of the third party libraries are installed using SPM
   - `adView(_ view: MPAdView!, didFailToLoadAdWithError error: Error!)`
   - `viewControllerForPresentingModalView() -> UIViewController?`
 
-- **MapViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **MapPulleyController** - manages the communication between the MapViewController and the MapDrawerViewController.    
   ##### Methods
   - `viewDidLoad()`
 
-- **MapDrawerViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **MapDrawerViewController** - view that manages the behavior of the drawer, which may show the details of a landmark or a list of landmarks.    
   ##### Methods
   - `viewDidLoad()`
   - `reload()`
@@ -230,7 +230,7 @@ Some of the third party libraries are installed using SPM
   - `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)`
   - `drawerPositionDidChange(drawer: PulleyViewController, bottomSafeArea: CGFloat)`
 
-- **SubscriptionViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **SubscriptionViewController** - a view that lets the user manage their subscription of the app.    
   ##### Methods
   - `viewDidLoad()`
   - `didTapUpgradeButton(_ sender: Any)`
@@ -243,11 +243,11 @@ Some of the third party libraries are installed using SPM
   - `fail(transaction: SKPaymentTransaction)`
   - `deliverPurchaseNotificationFor(identifier: String?)`
 
-- **FavoritesPulleyViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **FavoritesPulleyViewController** - manages the communication between FavoritesViewController and MapViewController.    
   ##### Methods
   - `viewDidLoad()`
 
-- **FavoritesViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **FavoritesViewController** - view that lets the user view and manage their favorites.    
   ##### Methods
   - `viewDidLoad()`
   - `viewWillAppear(_ animated: Bool)`
@@ -258,7 +258,7 @@ Some of the third party libraries are installed using SPM
   - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell`
   - `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)`
 
-- **AccountDetailsViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **AccountDetailsViewController** - view that shows the user's account details and lets the user choose options on what to do including logging out.    
   ##### Methods
   - `viewDidLoad()`
   - `unwindToSettings(unwindSegue: UIStoryboardSegue)`
@@ -272,7 +272,7 @@ Some of the third party libraries are installed using SPM
   - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell`
   - `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)`
 
-- **ChangePasswordViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **ChangePasswordViewController** - view that lets the user change their password.    
   ##### Methods
   - `viewDidLoad()`
   - `didTapBackButton(_ sender: Any)`
@@ -284,15 +284,15 @@ Some of the third party libraries are installed using SPM
   - `resetPasswordAuth() -> Bool`
   - `textFieldDidEndEditing(_ textField: UITextField)`
 
-- **PrivacyPolicyViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **PrivacyPolicyViewController** - view that shows the user the privac policy of the app.    
   ##### Methods
   - `viewDidLoad()`
 
-- **AboutUsViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **AboutUsViewController** - view that lets the user view information about the app.    
   ##### Methods
   - `viewDidLoad()`
 
-- **ContactUsViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **ContactUsViewController** - view that lets the user choose which way to contact the owner of the app.    
   ##### Methods
   - `viewDidLoad()`
   - `unwindToContactUs(unwindSegue: UIStoryboardSegue)`
@@ -304,7 +304,7 @@ Some of the third party libraries are installed using SPM
   - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell`
   - `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)`
 
-- **RateYourExperienceViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **RateYourExperienceViewController** - view that lets the user rate the app.    
   ##### Methods
   - `viewDidLoad()`
   - `btn1(_ sender: Any)`
@@ -317,33 +317,22 @@ Some of the third party libraries are installed using SPM
   - `submitRating()`
   - `setRating()`
 
-- **EmailFeedbackViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **EmailFeedbackViewController** - the superclass of views that involves sending an email.    
   ##### Methods
   - `viewDidLoad()`
   - `submitEmail(email: [String: Any?])`
   - `success()`
   - `generateBody(content: String, rating: Int? = nil) -> String`
 
-- **RateYourExperienceViewController** - manages the app access, redirects to Login screen when user is not logged in.    
-  ##### Methods
-  - `viewDidLoad()`
-  - `btn1(_ sender: Any)`
-  - `btn2(_ sender: Any)`
-  - `btn3(_ sender: Any)`
-  - `btn4(_ sender: Any)`
-  - `btn5(_ sender: Any)`
-  - `didTapBackButton(_ sender: Any)`
-  - `didTapDoneButton(_ sender: Any)`
-  - `submitRating()`
-  - `setRating()`
 
-- **ReportViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+
+- **ReportViewController** - view that lets the user report bugs or issues in the app.    
   ##### Methods
   - `viewDidLoad()`
   - `didTapDoneButton(_ sender: Any)`
   - `submitReport()`
 
-- **SuggestViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+- **SuggestViewController** - view that lets the user send their suggestions for the app.    
   ##### Methods
   - `viewDidLoad()`
   - `didTapDone(_ sender: Any)`
