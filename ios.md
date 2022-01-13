@@ -127,4 +127,224 @@ Some of the third party libraries are installed using SPM
   - `successSignUp()`
   - `googleSignIn()`
 
+- **ResetPasswordViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapSend(_ sender: Any)`
+  - `goNext()`
+  - `sendResetEmail()`
 
+- **ResetEmailViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapOpenEmail(_ sender: Any)`
+
+- **AppleAuthViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `presentationAnchor(for controller: ASAuthorizationController)`
+  - `handleAuthorizationAppleIDButtonPress()`
+  - `randomNonceString(length: Int = 32)`
+  - `startSignInWithAppleFlow()`
+  - `sha256(_ input: String)`
+  - `authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization)`
+  - `authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error)`
+  - `appleSignIn()`
+
+- **ARCameraViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapCloseButton(_ sender: Any)`
+  - `viewDidLayoutSubviews()`
+  - `touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)`
+  - `didReceiveMemoryWarning()`
+  - `sceneLocationViewDidAddSceneLocationEstimate(sceneLocationView: SceneLocationView, position: SCNVector3, location: CLLocation)`
+  - `sceneLocationViewDidRemoveSceneLocationEstimate(sceneLocationView: SceneLocationView, position: SCNVector3, location: CLLocation)`
+  - `sceneLocationViewDidConfirmLocationOfNode(sceneLocationView: SceneLocationView, node: LocationNode)`
+  - `sceneLocationViewDidSetupSceneNode(sceneLocationView: SceneLocationView, sceneNode: SCNNode)`
+  - `sceneLocationViewDidUpdateLocationAndScaleOfLocationNode(sceneLocationView: SceneLocationView, locationNode: LocationNode)`
+  - `fetchFirebaseLocations()`
+  - `addMarker (place: FirebaseLocationObject)`
+
+- **ARSelectionViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapCancelButton(_ sender: Any)`
+  - `didTapAddButton(_ sender: Any)`
+  - `setFavoriteButton()`
+
+- **ExploreViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapCameraButton(_ sender: Any)`
+
+- **MapViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapCameraButton(_ sender: Any)`
+  - `setupAds()`
+  - `reload()`
+  - `didTapSettings(_ sender: Any)`
+  - `didTapSearchBarButton(_ sender: Any)`
+  - `goToSettings()`
+  - `unwindToHomeVC(unwindSegue: UIStoryboardSegue)`
+  - `initializeLocationManager()`
+  - `setupMap()`
+  - `locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])`
+  - `focusMap(latitude: CLLocationDegrees, longitude: CLLocationDegrees)`
+  - `listLikelyPlaces()`
+  - `fetchFirebaseLocations()`
+  - `fetchAllFirebaseLocations()`
+  - `fetchFirebaseNearbyLocations()`
+  - `addMarker (location: FirebaseLocationObject, focus: Bool = false)`
+  - `textFieldDidEndEditing(_ textField: UITextField)`
+  - `beginSearch()`
+  - `fireStoreSearch(query: String)`
+  - `mapView(_ mapView: GMSMapView, didTap marker: GMSMarker)`
+  - `adViewDidLoadAd(_ view: MPAdView!, adSize: CGSize)`
+  - `adView(_ view: MPAdView!, didFailToLoadAdWithError error: Error!)`
+  - `viewControllerForPresentingModalView() -> UIViewController?`
+
+- **MapViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+
+- **MapDrawerViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `reload()`
+  - `registerViews()`
+  - `showLocationDetail()`
+  - `showSearchResults()`
+  - `fetchLocation(documentId: String)`
+  - `fetchUserById()`
+  - `searchFirebase(query: String)`
+  - `addAsFavorite(landmarkId: String, cell: WithFavoriteCell)`
+  - `setFavoriteStatus(landmarkId: String, cell: WithFavoriteCell)`
+  - `removeFromFavorites(cell: WithFavoriteCell)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int`
+  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell`
+  - `showDetail(location: FirebaseLocationObject)`
+  - `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)`
+  - `drawerPositionDidChange(drawer: PulleyViewController, bottomSafeArea: CGFloat)`
+
+- **SubscriptionViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapUpgradeButton(_ sender: Any)`
+  - `didTapCancelButton(_ sender: Any)`
+  - `fetchProducts()`
+  - `productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse)`
+  - `paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction])`
+  - `complete(transaction: SKPaymentTransaction)`
+  - `restore(transaction: SKPaymentTransaction)`
+  - `fail(transaction: SKPaymentTransaction)`
+  - `deliverPurchaseNotificationFor(identifier: String?)`
+
+- **FavoritesPulleyViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+
+- **FavoritesViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `viewWillAppear(_ animated: Bool)`
+  - `reload()`
+  - `fetchFavorites()`
+  - `didTapBackButton(_ sender: Any)`
+  - `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int`
+  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell`
+  - `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)`
+
+- **AccountDetailsViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `unwindToSettings(unwindSegue: UIStoryboardSegue)`
+  - `logout()`
+  - `goToChangePassword()`
+  - `goToContactUs()`
+  - `goToPrivacyPolicy()`
+  - `goToAboutUs()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int`
+  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell`
+  - `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)`
+
+- **ChangePasswordViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapResetButton(_ sender: Any)`
+  - `backToSettings()`
+  - `validateNewPassword() -> Bool`
+  - `validateConfirmPassword() -> Bool`
+  - `resetPassword()`
+  - `resetPasswordAuth() -> Bool`
+  - `textFieldDidEndEditing(_ textField: UITextField)`
+
+- **PrivacyPolicyViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+
+- **AboutUsViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+
+- **ContactUsViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `unwindToContactUs(unwindSegue: UIStoryboardSegue)`
+  - `goToRating()`
+  - `goToReport()`
+  - `goToSuggest()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int`
+  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell`
+  - `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)`
+
+- **RateYourExperienceViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `btn1(_ sender: Any)`
+  - `btn2(_ sender: Any)`
+  - `btn3(_ sender: Any)`
+  - `btn4(_ sender: Any)`
+  - `btn5(_ sender: Any)`
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapDoneButton(_ sender: Any)`
+  - `submitRating()`
+  - `setRating()`
+
+- **EmailFeedbackViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `submitEmail(email: [String: Any?])`
+  - `success()`
+  - `generateBody(content: String, rating: Int? = nil) -> String`
+
+- **RateYourExperienceViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `btn1(_ sender: Any)`
+  - `btn2(_ sender: Any)`
+  - `btn3(_ sender: Any)`
+  - `btn4(_ sender: Any)`
+  - `btn5(_ sender: Any)`
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapDoneButton(_ sender: Any)`
+  - `submitRating()`
+  - `setRating()`
+
+- **ReportViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapDoneButton(_ sender: Any)`
+  - `submitReport()`
+
+- **SuggestViewController** - manages the app access, redirects to Login screen when user is not logged in.    
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapDone(_ sender: Any)`
+  - `submitSuggestion()`
