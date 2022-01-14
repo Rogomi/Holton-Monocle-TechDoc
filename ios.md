@@ -45,15 +45,15 @@ Some of the third party libraries are installed using SPM
 **Alamofire** - For Web API Communications  
 **SwiftyJSON** - To ease up processing of response data  
 **ObjectMapper** - To easily create models for response data  
-**ARCL** - For the AR Camera
+**ARCL** - For the AR Camera  
 **mopub-ios-sdk** - To generate and manage ads for monetization
 
 ##### Google and Firebase Platform Libraries.
 **Firebase/Analytics** - Used for App Analytics  
 **Firebase/Crashlytics** - Used to identify causes of crashes from users  
-**Firebase/Performance** - Used to monitor application performance
-**Firebase/Auth** - Used to handle the user Authentication
-**Firebase/Firestore** - Used to handle data stored from Firestore which is used as the main database of the app
+**Firebase/Performance** - Used to monitor application performance  
+**Firebase/Auth** - Used to handle the user Authentication  
+**Firebase/Firestore** - Used to handle data stored from Firestore which is used as the main database of the app  
 **FirebaseFirestoreSwift** - Used to integrate Firestore smoothly on swift  
 **GoogleSignIn** - Used to sing in by Google  
 **GoogleMaps** - Used to show the Google Map  
