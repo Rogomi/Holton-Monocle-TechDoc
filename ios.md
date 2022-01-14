@@ -54,9 +54,9 @@ Some of the third party libraries are installed using SPM
 **Firebase/Performance** - Used to monitor application performance
 **Firebase/Auth** - Used to handle the user Authentication
 **Firebase/Firestore** - Used to handle data stored from Firestore which is used as the main database of the app
-**FirebaseFirestoreSwift** - Used to integrate Firestore smoothly on swift
-**GoogleSignIn** - Used to sing in by Google
-**GoogleMaps** - Used to show the Google Map
+**FirebaseFirestoreSwift** - Used to integrate Firestore smoothly on swift  
+**GoogleSignIn** - Used to sing in by Google  
+**GoogleMaps** - Used to show the Google Map  
 **GooglePlaces** - Used to show the places on the Google Map
 
 
