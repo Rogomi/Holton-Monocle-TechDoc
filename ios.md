@@ -46,7 +46,7 @@ Some of the third party libraries are installed using SPM
 **SwiftyJSON** - To ease up processing of response data  
 **ObjectMapper** - To easily create models for response data  
 **ARCL** - For the AR Camera  
-**mopub-ios-sdk** - To generate and manage ads for monetization
+**AppLovinSDK** - To generate and manage ads for monetization
 
 ##### Google and Firebase Platform Libraries.
 **Firebase/Analytics** - Used for App Analytics  
