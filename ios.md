@@ -22,7 +22,7 @@ Holton Monocle iOS requires devices with at least iOS 12.1
 
 ### APPLICATION ID
 
-com.holton.monocledemo
+com.holton.monocle
 
 ### DEBUGGING
 
