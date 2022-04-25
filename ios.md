@@ -83,7 +83,8 @@ Some of the third party libraries are installed using SPM
   - Google Sign In - Sets the API key for Google Sign In
   - IQKeyboardManager - enables the global usage of IQKeyboardManager.
   - Firebase Firestore - enables the app to use Firestore.  
-  - Mo Pub - enables the app to use Mo Pub for ads.  
+  - AppLovinSDK - enables the app to use AppLovin MAX for ads.  
+  - SwiftyStoreKit - enables the app to manage app store transactions.  
 
 
 #### View Controllers
@@ -239,13 +240,10 @@ Some of the third party libraries are installed using SPM
   - `viewDidLoad()`
   - `didTapUpgradeButton(_ sender: Any)`
   - `didTapCancelButton(_ sender: Any)`
-  - `fetchProducts()`
-  - `productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse)`
-  - `paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction])`
-  - `complete(transaction: SKPaymentTransaction)`
-  - `restore(transaction: SKPaymentTransaction)`
-  - `fail(transaction: SKPaymentTransaction)`
-  - `deliverPurchaseNotificationFor(identifier: String?)`
+  - `fetchProductsSwifty()`
+  - `getReceipt()`
+  - `setupPaymentSwifty()`
+  - `setExpiration(date: Date, item: ReceiptItem?, fromPurchase: Bool = false, isExpired: Bool)`
 
 - **FavoritesPulleyViewController** - manages the communication between FavoritesViewController and MapViewController.    
   ##### Methods
