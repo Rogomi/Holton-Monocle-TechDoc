@@ -71,6 +71,7 @@ Some of the third party libraries are installed using SPM
 
 ##### Other Useful Libraries 
 **ReachabilitySwift** - Used to check internet connection status   
+**SwiftyStoreKit** - A framework used to make implementing in app purchases easier 
 
 
 ### ACTIVITIES AND CONTROLLERS  
@@ -202,9 +203,12 @@ Some of the third party libraries are installed using SPM
   - `beginSearch()`
   - `fireStoreSearch(query: String)`
   - `mapView(_ mapView: GMSMapView, didTap marker: GMSMarker)`
-  - `adViewDidLoadAd(_ view: MPAdView!, adSize: CGSize)`
-  - `adView(_ view: MPAdView!, didFailToLoadAdWithError error: Error!)`
-  - `viewControllerForPresentingModalView() -> UIViewController?`
+  - `didLoad(_ ad: MAAd)`
+  - `didFailToLoadAd(forAdUnitIdentifier adUnitIdentifier: String, withError error: MAError)`
+  - `didFail(toDisplay ad: MAAd, withError error: MAError)`
+  - `didClick(_ ad: MAAd)`
+  - `didExpand(_ ad: MAAd)`
+  - `didCollapse(_ ad: MAAd)`
 
 - **MapPulleyController** - manages the communication between the MapViewController and the MapDrawerViewController.    
   ##### Methods
