@@ -1,12 +1,12 @@
-[Back](index.md)
+[Back](web.md)
 
-# Holton Monocle Web
+# Holton Orbeas Rogue Web Frontend
 
 ## Technical Documentation
     
 ### GETTING STARTED
 
-Holton Monocle Web Frontend was developed using JavaScript.  The frontend was developed using the Vue.JS framework.
+Holton Orbeas Rogue Web Frontend was developed using the Vue.JS JavaScript framework.
 
 ### INSTALLATION AND DEVELOPMENT
 
@@ -15,7 +15,7 @@ Lastly, the user must have a text editor program. The developers suggest [Visual
 
 ### PROGRAMMING LANGUAGE
 
-Holton Monocle Web uses JavaScript for development
+Holton Orbeas Rogue Web uses JavaScript for development
 
 ### DEBUGGING
 
